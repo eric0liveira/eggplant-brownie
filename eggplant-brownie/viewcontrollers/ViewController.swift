@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddAnItemDelegate {
     
     @IBOutlet var nameField : UITextField?
     @IBOutlet var happinessField : UITextField?
@@ -22,6 +22,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                  Item(name: "Coconut oil", calories: 500),
                  Item(name: "Chocolate frosting", calories: 1000),
                  Item(name: "Chocolate chip", calories: 1000)]
+    
+    @IBOutlet var tableView : UITableView?
+    
+    func add(_ item: Item) {
+        items.append(item)
+        if let table = tableView {
+            table.reloadData()
+        }
+    }
+    
+    override func viewDidLoad() {
+        let newItemButton = UIBarButtonItem(title: "New Item", style: UIBarButtonItemStyle.plain, target: self, action: #selector(showNewItem))
+        navigationItem.rightBarButtonItem = newItemButton
+    }
+    
+    @objc func showNewItem() {
+        let newItem = NewItemViewController(delegate: self)
+        if let navigation = navigationController {
+            navigation.pushViewController(newItem, animated: true)
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
