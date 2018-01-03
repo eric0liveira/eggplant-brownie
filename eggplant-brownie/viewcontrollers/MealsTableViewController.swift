@@ -45,7 +45,12 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
             if let indexPath = tableView.indexPath(for: cell) {
                 let row = indexPath.row
                 let meal = meals[row]
-                print("log press: \(meal.name)")
+                
+                let details = UIAlertController(title: meal.name, message: meal.datails(), preferredStyle: UIAlertControllerStyle.alert)
+                
+                let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil)
+                details.addAction(ok)
+                self.present(details, animated: true, completion: nil)
             }
         }
     }

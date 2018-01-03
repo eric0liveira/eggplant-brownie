@@ -26,4 +26,13 @@ class Meal {
         }
         return total
     }
+    
+    func datails() -> String{
+        var message = "Happiness : \(happiness)"
+        for item in items {
+            message += "\n\(item.name) - calories \(item.calories)"
+        }
+        
+        return message
+    }
 }
