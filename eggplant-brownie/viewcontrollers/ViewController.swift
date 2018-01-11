@@ -29,6 +29,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         items.append(item)
         if let table = tableView {
             table.reloadData()
+        } else {
+            let alert = UIAlertController(title: "Sorry", message: "Unknown error", preferredStyle: UIAlertControllerStyle.alert)
+            let ok = UIAlertAction(title: "Understood", style: UIAlertActionStyle.cancel, handler: nil)
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
         }
     }
     
