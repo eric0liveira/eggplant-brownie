@@ -46,11 +46,11 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
                 let row = indexPath.row
                 let meal = meals[row]
                 
-                let details = UIAlertController(title: meal.name, message: meal.datails(), preferredStyle: UIAlertControllerStyle.alert)
-                
-                let ok = UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil)
-                details.addAction(ok)
-                self.present(details, animated: true, completion: nil)
+                RemoveMealController(controller:self).show(meal, handler: {
+                    action in
+                    self.meals.remove(at: row)
+                    self.tableView.reloadData()
+                })
             }
         }
     }

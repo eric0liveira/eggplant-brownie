@@ -16,6 +16,7 @@
 		5B52F9101FF98E99009CAB2D /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52F90F1FF98E98009CAB2D /* NewItemViewController.swift */; };
 		5B52F9121FF99977009CAB2D /* AddAnItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52F9111FF99977009CAB2D /* AddAnItemDelegate.swift */; };
 		5BA0FDE51FF71489004911DD /* AddAMealDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0FDE41FF71488004911DD /* AddAMealDelegate.swift */; };
+		5BA9785A200AF03700A3CE44 /* RemoveMealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97859200AF03700A3CE44 /* RemoveMealController.swift */; };
 		5BB174EE20086C3300C35C75 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB174ED20086C3300C35C75 /* Alert.swift */; };
 		5BDB04821FE74BDF00510A13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB04811FE74BDF00510A13 /* AppDelegate.swift */; };
 		5BDB04891FE74BDF00510A13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDB04881FE74BDF00510A13 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		5B52F90F1FF98E98009CAB2D /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		5B52F9111FF99977009CAB2D /* AddAnItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnItemDelegate.swift; sourceTree = "<group>"; };
 		5BA0FDE41FF71488004911DD /* AddAMealDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAMealDelegate.swift; sourceTree = "<group>"; };
+		5BA97859200AF03700A3CE44 /* RemoveMealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveMealController.swift; sourceTree = "<group>"; };
 		5BB174ED20086C3300C35C75 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		5BDB047E1FE74BDF00510A13 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDB04811FE74BDF00510A13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				5B0889591FF0125D0039C9F4 /* Main.storyboard */,
 				5B52F90C1FF98E21009CAB2D /* NewItemViewController.xib */,
+				5BA97859200AF03700A3CE44 /* RemoveMealController.swift */,
 				5BB174ED20086C3300C35C75 /* Alert.swift */,
 			);
 			path = views;
@@ -308,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA9785A200AF03700A3CE44 /* RemoveMealController.swift in Sources */,
 				5BB174EE20086C3300C35C75 /* Alert.swift in Sources */,
 				5B0889D01FF03DD50039C9F4 /* MealsTableViewController.swift in Sources */,
 				5B0889561FF00FEB0039C9F4 /* Item.swift in Sources */,
