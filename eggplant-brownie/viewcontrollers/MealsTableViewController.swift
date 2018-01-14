@@ -9,29 +9,16 @@
 import UIKit
 
 class MealsTableViewController: UITableViewController, AddAMealDelegate {
-    var meals = [Meal(name: "Eggplant Brownie", happiness: 5), Meal(name: "Zucchini Muffin", happiness: 3), Meal(name: "Roberta's Cheesecake", happiness: 4)]
+    var meals = Array<Meal>()
     
     func add(_ meal:Meal) {
         meals.append(meal)
-        
-        NSKeyedArchiver.archiveRootObject(meals, toFile: getArchive())
+        Dao().save(meals)
         tableView.reloadData()
     }
     
-    func getArchive() -> String {
-        let userDirs = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
-        
-        let dir = userDirs[0]
-        let archive = "\(dir)/eggplant-brownie-meals.dados"
-        
-        return archive
-    }
-    
     override func viewDidLoad() {
-        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive()) {
-            self.meals = loaded as! Array<Meal>
-        }
-        
+        self.meals = Dao().load()       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,7 +54,7 @@ class MealsTableViewController: UITableViewController, AddAMealDelegate {
                 RemoveMealController(controller:self).show(meal, handler: {
                     action in
                     self.meals.remove(at: row)
-                    NSKeyedArchiver.archiveRootObject(self.meals, toFile: self.getArchive())
+                    Dao().remove(self.meals)
                     self.tableView.reloadData()
                 })
             }

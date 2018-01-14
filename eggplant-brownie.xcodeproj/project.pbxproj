@@ -17,6 +17,7 @@
 		5B52F9121FF99977009CAB2D /* AddAnItemDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B52F9111FF99977009CAB2D /* AddAnItemDelegate.swift */; };
 		5BA0FDE51FF71489004911DD /* AddAMealDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA0FDE41FF71488004911DD /* AddAMealDelegate.swift */; };
 		5BA9785A200AF03700A3CE44 /* RemoveMealController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA97859200AF03700A3CE44 /* RemoveMealController.swift */; };
+		5BA9785C200B0E9800A3CE44 /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA9785B200B0E9800A3CE44 /* Dao.swift */; };
 		5BB174EE20086C3300C35C75 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB174ED20086C3300C35C75 /* Alert.swift */; };
 		5BDB04821FE74BDF00510A13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDB04811FE74BDF00510A13 /* AppDelegate.swift */; };
 		5BDB04891FE74BDF00510A13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDB04881FE74BDF00510A13 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		5B52F9111FF99977009CAB2D /* AddAnItemDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnItemDelegate.swift; sourceTree = "<group>"; };
 		5BA0FDE41FF71488004911DD /* AddAMealDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAMealDelegate.swift; sourceTree = "<group>"; };
 		5BA97859200AF03700A3CE44 /* RemoveMealController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveMealController.swift; sourceTree = "<group>"; };
+		5BA9785B200B0E9800A3CE44 /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		5BB174ED20086C3300C35C75 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		5BDB047E1FE74BDF00510A13 /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDB04811FE74BDF00510A13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				5BA0FDE41FF71488004911DD /* AddAMealDelegate.swift */,
 				5B0889551FF00FEB0039C9F4 /* Item.swift */,
 				5B52F9111FF99977009CAB2D /* AddAnItemDelegate.swift */,
+				5BA9785B200B0E9800A3CE44 /* Dao.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				5BA9785A200AF03700A3CE44 /* RemoveMealController.swift in Sources */,
 				5BB174EE20086C3300C35C75 /* Alert.swift in Sources */,
+				5BA9785C200B0E9800A3CE44 /* Dao.swift in Sources */,
 				5B0889D01FF03DD50039C9F4 /* MealsTableViewController.swift in Sources */,
 				5B0889561FF00FEB0039C9F4 /* Item.swift in Sources */,
 				5B0889541FF00F750039C9F4 /* Meal.swift in Sources */,
