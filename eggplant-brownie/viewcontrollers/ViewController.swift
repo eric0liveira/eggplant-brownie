@@ -25,8 +25,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet var tableView : UITableView?
     
+    func getArchive() -> String {
+        let userDirs = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
+        
+        let dir = userDirs[0]
+        let archive = "\(dir)/eggplant-brownie-items.dados"
+        
+        return archive
+    }
+    
     func add(_ item: Item) {
         items.append(item)
+        
+        NSKeyedArchiver.archiveRootObject(items, toFile: getArchive())
+        
         if let table = tableView {
             table.reloadData()
         } else {
@@ -37,6 +49,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         let newItemButton = UIBarButtonItem(title: "New Item", style: UIBarButtonItemStyle.plain, target: self, action: #selector(showNewItem))
         navigationItem.rightBarButtonItem = newItemButton
+        
+        if let loaded = NSKeyedUnarchiver.unarchiveObject(withFile: getArchive()) {
+            items = loaded as! Array<Item>
+        }
     }
     
     @objc func showNewItem() {

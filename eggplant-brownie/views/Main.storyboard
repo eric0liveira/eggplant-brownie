@@ -71,7 +71,7 @@
                     <connections>
                         <outlet property="happinessField" destination="IsI-Lo-5Bz" id="azt-I3-2eW"/>
                         <outlet property="nameField" destination="euy-5U-9j8" id="svq-zh-w6d"/>
-                        <outlet property="tableView" destination="Y4Y-5S-bol" id="TrV-Vi-cQl"/>
+                        <outlet property="tableView" destination="Y4Y-5S-bol" id="I2b-35-4JH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
